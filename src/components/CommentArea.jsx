@@ -2,13 +2,12 @@ import CommentsList from "./CommentsList";
 import AddComment from "./AddComment";
 import { useState, useEffect } from "react";
 
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJiMjRlYTBlNzg3MDAwMTRkODkxZTMiLCJpYXQiOjE2ODA1NDkwOTksImV4cCI6MTY4MTc1ODY5OX0.wZNhhXeC4pLpWKZ9WtjZw4t7oG5_9akjS-5YIWSviJg";
 
 const CommentArea = (props) => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    fetchComments();
+    fetchComments()
   }, [props.asin]);
 
   const fetchComments = async () => {
